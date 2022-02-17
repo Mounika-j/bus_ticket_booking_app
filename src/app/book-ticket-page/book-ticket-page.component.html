@@ -1,0 +1,34 @@
+<section class="ticket-book-section d-flex flex-column flex-md-row">
+    <div class="imag-wrap">
+        <img src="../../assets/Bus_bg.jpg">
+    </div>
+
+    <div class="booking-form d-flex flex-column justify-content-center align-items-center">
+
+        <form class="form-container">
+            <h4>Ticket Booking</h4>
+            <div *ngIf="enableErrorMsg" class="manditory-wrap">
+                <span>{{errorMsg}}</span>
+            </div>
+            <div class="form-field-block ">
+                <span class="search-label">Select Date <span  class="manditory-cls">*</span></span>
+                <mat-form-field appearance="standard" class=" search-details-wrap">
+                    <input [min]="currentDate" name="dateValue" matInput [matDatepicker]="picker" placeholder="select date" (dateInput)="addEvent('input', $event)" required (dateChange)="addEvent('change', $event)" [(ngModel)]="bookTicketObj.dateVal">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+            </div>
+
+            <div class="form-field-block ">
+                <span class="search-label">Mobile Number <span  class="manditory-cls">*</span></span>
+
+                <mat-form-field class="search-details-wrap" appearance="standard">
+                    <input #mobileNumber (mouseenter)="allowNumberonly($event)" type="number" name="mobile" matInput placeholder="Enter Moblie number " [(ngModel)]="bookTicketObj.mobileVal" class="input-field" required pattern="^[6-9]\d{9}$" maxlength="10">
+                </mat-form-field>
+
+            </div>
+            <button type="button" class="custom-btn" (click)='bookingSave()'> Submit</button>
+        </form>
+    </div>
+
+</section>

@@ -1,0 +1,168 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.form-field-block {
+  margin-bottom: 15px;
+  width: 280px;
+  .search-label{
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    color: #00000085;
+    margin-bottom: 12px;
+    display: block;
+  }
+  .mat-form-field {
+    border-radius: 4px;
+    background: #fff;
+    width: 100%;
+    border-radius: 4px;
+        border: solid 1px rgb(221 221 221 / 0.6)!important;
+    &.search-field-label {
+        width: 100%;
+        padding: 11px 15px;
+
+      .mat-form-field-wrapper {
+        .mat-form-field-infix {
+          position: relative;
+          width: 100%;
+
+        }
+      }
+    }
+    &.search-field-dropdown {
+      width: 302px;
+      .mat-form-field-wrapper {
+        .mat-form-field-infix {
+          padding: 16px 16px;
+        }
+      }
+    }
+    .mat-form-field-wrapper {
+      padding: 0;
+      .mat-form-field-flex{
+        padding: 0;
+      }
+      .mat-form-field-infix {
+        margin: 0;
+        padding: 0;
+        padding: 15px 16px;
+        border: 0;
+        .mat-input-element,
+        .mat-select-value-text span {
+          margin: 0;
+          font-size: 14px;
+          line-height: 1;
+          color: #0b1856;
+          opacity: 0.48;
+        }
+      }
+    }
+    &.mat-form-field-disabled {
+      background: #f1f4fa;
+    }
+  }
+}
+
+
+
+ .mat-form-field-underline {
+  display: none;
+}
+.custom-btn{
+  background: #00000085;
+    padding: 10px 20px;
+    min-width: 150px;
+    border: 0;
+    border-radius: 5px;
+    color: #fff;
+    margin: 20px 0;
+    font-weight: 500;
+}
+.manditory-cls{
+  color: red;
+}
+.manditory-wrap{
+  background: #ff00005e;
+  border-radius: 5px;
+  padding: 2px 5px;
+  margin-bottom: 10px;
+  span{
+    color: red;
+    font-size: 12px;
+  }
+}
+
+.custom-mat-check {
+  margin-bottom: 21px;
+  ::ng-deep {
+    .mat-checkbox-layout {
+      margin-bottom: 0;
+      .mat-checkbox-inner-container {
+        .mat-checkbox-frame {
+          border-radius: 4px;
+          border: solid 1px #d7dbec;
+        }
+      }
+      .mat-checkbox-label {
+        opacity: 0.82;
+        font-size: 14px;
+        line-height: 1.86;
+        color: #0b1856;
+        padding-left: 8px;
+        display: inline-block;
+      }
+    }
+    .mat-checkbox-checked.mat-accent .mat-checkbox-background,
+    .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+      background-color: #00000085;
+      border-radius: 4px;
+    }
+  }
+}
+.custom-mat-check .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background,.custom-mat-check .mat-checkbox-checked.mat-accent .mat-checkbox-background {
+  background-color: #3e7fd5;
+  border-radius: 4px;
+}
+h4{
+  color: #00000085;
+  font-size: 28px;
+  margin-bottom: 55px;
+  font-weight: bold;
+}
+.mat-table {
+  width: 100%;
+  // margin: 0 auto;
+}
+.mat-tab-body-content .mat-table {
+  border: solid 1px #eeeeee;
+  border-radius: 4px;
+  tbody {
+    .mat-row:nth-child(even) {
+      background-color: #fbfbfb;
+    }
+  }
+}
+
+.mat-header-row .mat-header-cell, .mat-row .mat-cell {
+  opacity: 0.82;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 3.29;
+  color: #0b1856;
+}
+.mat-row .mat-cell {
+  font-weight: normal;
+}
+td.mat-cell:first-of-type, td.mat-footer-cell:first-of-type, th.mat-header-cell:first-of-type {
+  padding-left: 24px;
+}
+.seat-no-txt{
+  &:last-child{
+    span.separartor{
+      display: none;
+    }
+  }
+}

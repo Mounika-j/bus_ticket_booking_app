@@ -1,0 +1,40 @@
+.ticket-book-section{
+  // &:after{
+
+  //   opacity: 0.4;
+  // }
+  height: 100vh;
+
+
+  .imag-wrap{
+    // height: 100%;
+    // background: url('../../assets/Bus_bg.png') no-repeat 100% 100%;
+    // background-position: center;
+    // content: "";
+    width: 60%;
+
+    img{
+      width: 100%;
+      height: 100%;
+    }
+    // height: 600px;
+  }
+.booking-form{
+  width: 50%;
+  .form-container{
+    padding: 20px;
+    box-shadow: 5px 10px 8px 10px #888888;
+    border-radius: 5px;
+  }
+}
+  // opacity: .2;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .ticket-book-section{
+    .booking-form, .imag-wrap{
+      width: 100%;
+    }
+  }
+}

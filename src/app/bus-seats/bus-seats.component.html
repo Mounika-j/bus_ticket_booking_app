@@ -1,0 +1,25 @@
+<section class="buses-container d-flex align-items-center flex-column">
+    <h4>Bus Seats Numbers</h4>
+    <div *ngIf="enableErrorMsg" class="manditory-wrap">
+        <span>{{errorMsg}}</span>
+    </div>
+    <div class="outer-seats-wrapper">
+        <div class="seats-wrapper d-flex flex-wrap" *ngIf="SeatListArr.length > 0">
+            <div class="" *ngFor="let element of SeatListArr;let i = index ">
+                <!-- {{element | json}} -->
+                <div class="custom-mat-check" *ngFor="let item of element.seatsArr">
+                    <mat-checkbox class="example-margin" [disabled]="(selectedArr.length === 6 && !item.seatedChecked) || (item.enableChecked && item.seatedChecked)" [checked]="item.seatedChecked" name='loginOtpCheck' (change)="showOptions($event, element, item, i)">SNo: {{item.seatno}}</mat-checkbox>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="no-seats-grid" *ngIf="SeatListArr.length === 0 ">
+            <span>
+                No Seats Avalibale
+            </span>
+        </div>
+
+    </div>
+    <button class="custom-btn" (click)="ConfirmBooking()"> Preview Booking Details </button>
+</section>

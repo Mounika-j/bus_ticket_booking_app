@@ -1,0 +1,44 @@
+
+.outer-seats-wrapper{
+  height: 69vh;
+  overflow: auto;
+  .seats-wrapper {
+    width: 50%;
+    margin: 0 auto;
+    height: 100%;
+    .custom-mat-check{
+      display: inline-block;
+      margin: 10px 0 0 10px;
+      flex-grow: 1;
+      width: calc(100% * (1/4) - 10px - 1px);
+    }
+  }
+}
+.buses-container{
+  &:after{
+    content: '';
+    background: url('../../assets/bg_img.jpg') no-repeat 500px 500px;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+    background-position: top;
+    position: absolute;
+    background-size: cover;
+    z-index: -1;
+  }
+  h4{
+    margin: 20px 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+
+  .outer-seats-wrapper{
+    .seats-wrapper {
+      width: 100%;
+      .custom-mat-check{
+        margin: 10px 0 0 2px;
+      }
+    }
+  }
+}
